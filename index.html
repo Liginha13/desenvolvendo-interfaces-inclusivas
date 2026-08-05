@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta 60+ - Acessibilidade e Segurança Digital</title>
+</head>
+<body>
+
+  <!-- BARRA DE FERRAMENTAS DE ACESSIBILIDADE FIXA NO TOPO -->
+  <div class="barra-acessibilidade" role="region" aria-label="Controles de Acessibilidade">
+    <div class="acessibilidade-grupo">
+      <span class="rotulo-ferramenta">📐 Tamanho do Texto:</span>
+      <button class="botao-ferramenta" onclick="mudarFonte('normal')" aria-label="Tamanho de fonte normal">A</button>
+      <button class="botao-ferramenta" onclick="mudarFonte('grande')" aria-label="Tamanho de fonte grande">A+</button>
+      <button class="botao-ferramenta" onclick="mudarFonte('gigante')" aria-label="Tamanho de fonte muito grande">A++</button>
+    </div>
+
+    <div class="acessibilidade-grupo">
+      <span class="rotulo-ferramenta">🎨 Visual:</span>
+      <button class="botao-ferramenta" onclick="alternarContraste()" id="btn-contraste">
+        ◐ Alto Contraste
+      </button>
+    </div>
+  </div>
+
+  <!-- BANNER INICIAL COM BOTÃO DE AJUDA FUNCIONAL -->
+  <header class="banner-inicio" id="inicio">
+    <h1>Conecta 60+</h1>
+    <p>Seu espaço simples e seguro para navegar na internet sem complicações.</p>
+    
+    <div class="caixa-botao-ajuda">
+      <button class="botao-ajuda-urgente" onclick="abrirModalAjuda()" aria-label="Pedir ajuda em caso de dúvida ou suspeita de golpe">
+        <span>🚨 ESTÁ COM DÚVIDA OU SUSPEITA?</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="recipiente-principal">
+
+    <!-- NAVEGAÇÃO RÁPIDA -->
+    <nav class="grade-atalhos" aria-label="Atalhos Rápido do Menu">
+      <a href="#dicas-curtas" class="botao-atalho">
+        <span class="icone-botao-atalho">💡</span>
+        <span>Dicas Rápidas</span>
+      </a>
+      <a href="#sinais-golpe" class="botao-atalho">
+        <span class="icone-botao-atalho">⚠️</span>
+        <span>Sinais de Golpe</span>
+      </a>
+      <a href="#direitos" class="botao-atalho">
+        <span class="icone-botao-atalho">⚖️</span>
+        <span>Seus Direitos</span>
+      </a>
+    </nav>
+
+    <!-- SEÇÃO 1: 3 DICAS CURTAS E SIMPLES -->
+    <section id="dicas-curtas">
+      <h2 class="titulo-secao">
+        <span>💡</span> Dicas Importantes de Segurança
+      </h2>
+      <p style="margin-bottom: 20px;">Três regras simples para lembrar no seu dia a dia:</p>
+
+      <div class="grade-dicas-curtas">
+        <!-- DICA 1 -->
+        <article class="cartao-dica-curta" id="dica-1">
+          <div>
+            <h3><span>📲</span> 1. Pedidos no WhatsApp</h3>
+            <p>Se algum parente pedir dinheiro por mensagem dizendo que trocou de número, <strong>não pague</strong>! Ligue para o número antigo dele para confirmar.</p>
+          </div>
+          <button class="botao-ouvir" onclick="lerTexto('dica-1')" style="margin-top: 16px;">🔊 Ouvir</button>
+        </article>
+
+        <!-- DICA 2 -->
+        <article class="cartao-dica-curta" id="dica-2">
+          <div>
+            <h3><span>🔑</span> 2. Suas Senhas</h3>
+            <p><strong>Nunca informe suas senhas</strong> por telefone ou mensagem. Bancos e órgãos do governo jamais pedem suas senhas secretas.</p>
+          </div>
+          <button class="botao-ouvir" onclick="lerTexto('dica-2')" style="margin-top: 16px;">🔊 Ouvir</button>
+        </article>
+
+        <!-- DICA 3 -->
+        <article class="cartao-dica-curta" id="dica-3">
+          <div>
+            <h3><span>🔗</span> 3. Links Estranhos</h3>
+            <p><strong>Não clique em links</strong> que prometem prêmios, presentes ou recadastramentos do INSS. Apague a mensagem imediatamente.</p>
+          </div>
+          <button class="botao-ouvir" onclick="lerTexto('dica-3')" style="margin-top: 16px;">🔊 Ouvir</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: ATITUDES SUSPEITAS (COMO SABER SE ESTOU CAINDO EM GOLPE?) -->
+    <section id="sinais-golpe">
+      <div class="cabecalho-cartao" style="margin-top: 40px;">
+        <h2 class="titulo-secao" style="margin: 0; border: none;">
+          <span>⚠️</span> Como saber se estou caindo em um golpe?
+        </h2>
+        <button class="botao-ouvir" onclick="lerTexto('secao-sinais')">🔊 Ouvir Seção</button>
+      </div>
+
+      <div class="cartao-informativo" id="secao-sinais">
+        <p style="margin-bottom: 20px;">Fique muito atento caso perceba qualquer uma destas <strong>4 atitudes suspeitas</strong>:</p>
+
+        <ul class="lista-suspeita">
+          <li>
+            <span class="icone-alerta">🚨</span>
+            <div>
+              <strong>Muita Urgência:</strong> A pessoa diz que você precisa enviar o dinheiro "agora" ou sua conta será bloqueada. Golpistas usam a pressa para você não pensar.
+            </div>
+          </li>
+          <li>
+            <span class="icone-alerta">🔒</span>
+            <div>
+              <strong>Pedido de Segredo:</strong> Pedem para você "não contar para ninguém", nem para seus filhos ou para os funcionários do banco.
+            </div>
+          </li>
+          <li>
+            <span class="icone-alerta">📱</span>
+            <div>
+              <strong>Mudança de Número Repentina:</strong> Alguém envia mensagem dizendo "mudei de número, apague o outro" e logo em seguida pede Pix ou pagamentos.
+            </div>
+          </li>
+          <li>
+            <span class="icone-alerta">🎁</span>
+            <div>
+              <strong>Vantagens Mágicas:</strong> Promessas de prêmios de sorteios que você não participou ou ofertas de empréstimo sem juros.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: DIREITOS NA INTERNET -->
+    <section id="direitos">
+      <div class="cabecalho-cartao" style="margin-top: 40px;">
+        <h2 class="titulo-secao" style="margin: 0; border: none;">
+          <span>⚖️</span> Seus Direitos na Internet
+        </h2>
+        <button class="botao-ouvir" onclick="lerTexto('secao-direitos-texto')">🔊 Ouvir Seção</button>
+      </div>
+
+      <div class="cartao-informativo" id="secao-direitos-texto">
+        <p style="margin-bottom: 16px;">A lei garante que você navegue de forma segura e justa. Conheça os seus principais direitos:</p>
+
+        <ol class="lista-direitos">
+          <li>
+            <strong>Direito à Privacidade de Dados:</strong> Nenhuma empresa ou aplicativo pode vender ou espalhar suas informações pessoais (como CPF, endereço e telefone) sem a sua autorização.
+          </li>
+          <li>
+            <strong>Direito ao Cancelamento Fácil:</strong> Se você contratou um serviço, compra ou assinatura pela internet, tem até <strong>7 dias</strong> para se arrepender, cancelar e receber todo o seu dinheiro de volta.
+          </li>
+          <li>
+            <strong>Direito ao Atendimento Acessível:</strong> Sites de bancos, serviços públicos e grandes lojas são obrigados por lei a oferecer opções acessíveis para pessoas idosas e com dificuldades de visão ou audição.
+          </li>
+          <li>
+            <strong>Proteção do Banco em Golpes:</strong> Se você for vítima de uma fraude comprovada no seu aplicativo de banco, a instituição financeira é obrigada a analisar o caso e ajudar na recuperação dos seus valores.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JANELA MODAL DE AJUDA FUNCIONAL -->
+  <div class="camada-modal" id="modal-ajuda" role="dialog" aria-labelledby="titulo-modal" aria-hidden="true">
+    <div class="conteudo-modal">
+      <h3 id="titulo-modal">🚨 O que fazer agora?</h3>
+      <p style="margin-bottom: 16px;">Se você desconfia de uma mensagem ou acha que caiu em um golpe, siga estes passos:</p>
+
+      <div style="background-color: var(--cor-destaque-fundo); border-left: 6px solid var(--cor-destaque); padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+        <strong>1. PARE:</strong> Não faça transferências e não digite nenhuma senha.
+      </div>
+
+      <div style="background-color: var(--cor-alerta-fundo); border-left: 6px solid var(--cor-alerta); padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+        <strong>2. CHAME ALGUÉM:</strong> Mostre a tela do seu celular para um filho, neto ou vizinho de confiança.
+      </div>
+
+      <a href="tel:190" class="botao-ajuda-urgente" style="margin-top: 12px; font-size: 1.1em; padding: 14px;">
+        📞 Ligar para a Polícia (190)
+      </a>
+
+      <button class="botao-fechar-modal" onclick="fecharModalAjuda()">Entendi / Fechar Tela</button>
+    </div>
+  </div>
+
+  <rodape>
+    <p><strong>Conecta 60+</strong> — Aplicativo focado em Acessibilidade e Segurança Digital.</p>
+    <p style="margin-top: 6px; font-size: 0.85em;">Desenvolvido com carinho para a terceira idade.</p>
+  </rodape>
+
+  <!-- JAVASCRIPT DE ACESSIBILIDADE E INTERATIVIDADE -->
+  <script>
+    /* Mudança do Tamanho da Fonte */
+    function mudarFonte(tamanho) {
+      document.body.classList.remove('fonte-grande', 'fonte-gigante');
+      if (tamanho === 'grande') {
+        document.body.classList.add('fonte-grande');
+      } else if (tamanho === 'gigante') {
+        document.body.classList.add('fonte-gigante');
+      }
+    }
+
+    /* Alternar Alto Contraste */
+    function alternarContraste() {
+      document.body.classList.toggle('alto-contraste');
+      const botao = document.getElementById('btn-contraste');
+      if (document.body.classList.contains('alto-contraste')) {
+        botao.innerHTML = '☀️ Modo Normal';
+      } else {
+        botao.innerHTML = '◐ Alto Contraste';
+      }
+    }
+
+    /* Leitor de Voz Nativo */
+    function lerTexto(idElemento) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const elemento = document.getElementById(idElemento);
+        const textoLido = elemento.innerText.replace(/🔊 Ouvir.*/g, '');
+
+        const locucao = new SpeechSynthesisUtterance(textoLido);
+        locucao.lang = 'pt-BR';
+        locucao.rate = 0.88; // Velocidade levemente reduzida para facilitar a compreensão
+        window.speechSynthesis.speak(locucao);
+      } else {
+        alert("Seu navegador não possui leitor de voz integrado.");
+      }
+    }
+
+    /* Funções da Janela Modal de Ajuda */
+    function abrirModalAjuda() {
+      const modal = document.getElementById('modal-ajuda');
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const locucao = new SpeechSynthesisUtterance("Atenção! Se você desconfia de uma mensagem, pare e não faça transferências. Mostre a tela para alguém de sua confiança.");
+        locucao.lang = 'pt-BR';
+        window.speechSynthesis.speak(locucao);
+      }
+    }
+
+    function fecharModalAjuda() {
+      const modal = document.getElementById('modal-ajuda');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    }
+  </script>
+
+</body>
+</html>
