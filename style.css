@@ -1,11 +1,11 @@
 
-    /* =========================================================
-       1. VARIÁVEIS DE ACESSIBILIDADE E TEMAS
-       ========================================================= */
-    :root {
+/* =========================================================
+1. VARIÁVEIS DE ACESSIBILIDADE E TEMAS
+========================================================= */
+:root {
       --tamanho-fonte-base: 22px;
       
-      /* Tema Claro (Padrão) */
+/* Tema Claro (Padrão) */
       --cor-fundo: #F4F6F8;
       --cor-cartao: #FFFFFF;
       --cor-texto: #1A1A1A;
@@ -22,10 +22,10 @@
       --cor-borda: #B2C0CE;
       --sombra: 0 4px 12px rgba(0, 0, 0, 0.12);
       --raio-borda: 16px;
-    }
+  }
 
     /* Tema de Alto Contraste (Escuro) */
-    body.alto-contraste {
+body.alto-contraste {
       --cor-fundo: #000000;
       --cor-cartao: #121212;
       --cor-texto: #FFFFFF;
@@ -41,19 +41,19 @@
       --cor-sucesso-fundo: #003300;
       --cor-borda: #FFFFFF;
       --sombra: 0 0 0 2px #FFFFFF;
-    }
+}
 
-    /* Modificadores de tamanho de fonte */
-    body.fonte-grande { --tamanho-fonte-base: 26px; }
-    body.fonte-gigante { --tamanho-fonte-base: 30px; }
+/* Modificadores de tamanho de fonte */
+body.fonte-grande { --tamanho-fonte-base: 26px; }
+body.fonte-gigante { --tamanho-fonte-base: 30px; }
 
-    * {
+*{
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
+}
 
-    body {
+body {
       background-color: var(--cor-fundo);
       color: var(--cor-texto);
       font-family: Arial, Helvetica, sans-serif;
@@ -61,12 +61,12 @@
       line-height: 1.6;
       padding-bottom: 60px;
       transition: background-color 0.3s, color 0.3s;
-    }
+}
 
-    /* =========================================================
-       2. BARRA DE FERRAMENTAS DE ACESSIBILIDADE
-       ========================================================= */
-    .barra-acessibilidade {
+/* =========================================================
+2. BARRA DE FERRAMENTAS DE ACESSIBILIDADE
+========================================================= */
+.barra-acessibilidade {
       background-color: #000000;
       color: #FFFFFF;
       padding: 12px 20px;
@@ -79,25 +79,25 @@
       top: 0;
       z-index: 1000;
       border-bottom: 3px solid var(--cor-primaria);
-    }
+}
 
-    body.alto-contraste .barra-acessibilidade {
+body.alto-contraste .barra-acessibilidade {
       background-color: #1A1A1A;
       border-bottom-color: #FFFFFF;
-    }
+}
 
-    .acessibilidade-grupo {
+.acessibilidade-grupo {
       display: flex;
       align-items: center;
       gap: 8px;
-    }
+}
 
-    .rotulo-ferramenta {
+.rotulo-ferramenta {
       font-size: 0.85em;
       font-weight: bold;
-    }
+}
 
-    .botao-ferramenta {
+  .botao-ferramenta {
       background-color: #333333;
       color: #FFFFFF;
       border: 2px solid #FFFFFF;
@@ -110,18 +110,18 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-    }
+}
 
-    .botao-ferramenta:hover,
-    .botao-ferramenta:focus {
+.botao-ferramenta:hover,
+.botao-ferramenta:focus {
       background-color: #555555;
       outline: 4px solid #FFD700;
-    }
+}
 
-    /* =========================================================
-       3. BANNER INICIAL COM BOTÃO DE AJUDA FUNCIONAL
-       ========================================================= */
-    .banner-inicio {
+/* =========================================================
+3. BANNER INICIAL COM BOTÃO DE AJUDA FUNCIONAL
+========================================================= */
+.banner-inicio {
       background-color: var(--cor-primaria);
       color: #FFFFFF;
       padding: 32px 20px;
@@ -130,39 +130,39 @@
       border-bottom-right-radius: var(--raio-borda);
       margin-bottom: 30px;
       box-shadow: var(--sombra);
-    }
+}
 
-    body.alto-contraste .banner-inicio {
+body.alto-contraste .banner-inicio {
       color: #000000;
       border: 3px solid #FFFFFF;
-    }
+}
 
-    .banner-inicio h1 {
+.banner-inicio h1 {
       font-size: 2.2em;
       margin-bottom: 10px;
-    }
+}
 
-    .banner-inicio p {
+.banner-inicio p {
       font-size: 1.2em;
       max-width: 750px;
       margin: 0 auto 24px auto;
-    }
+}
 
-    .caixa-botao-ajuda {
+.caixa-botao-ajuda {
       background-color: rgba(255, 255, 255, 0.15);
       border: 2px dashed #FFFFFF;
       padding: 20px;
       border-radius: var(--raio-borda);
       max-width: 600px;
       margin: 0 auto;
-    }
+}
 
-    body.alto-contraste .caixa-botao-ajuda {
+body.alto-contraste .caixa-botao-ajuda {
       background-color: #000000;
       border-color: #000000;
-    }
+}
 
-    .botao-ajuda-urgente {
+.botao-ajuda-urgente {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -179,25 +179,25 @@
       cursor: pointer;
       width: 100%;
       transition: background-color 0.2s, transform 0.2s;
-    }
+}
 
-    .botao-ajuda-urgente:hover,
-    .botao-ajuda-urgente:focus {
+.botao-ajuda-urgente:hover,
+.botao-ajuda-urgente:focus {
       background-color: var(--cor-destaque-hover);
       transform: scale(1.02);
       outline: 4px solid #FFD700;
-    }
+}
 
-    /* =========================================================
-       4. ESTRUTURA E CONTAINERS
-       ========================================================= */
-    .recipiente-principal {
+/* =========================================================
+4. ESTRUTURA E CONTAINERS
+========================================================= */
+.recipiente-principal {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 16px;
-    }
+}
 
-    .titulo-secao {
+.titulo-secao {
       font-size: 1.6em;
       color: var(--cor-primaria);
       margin: 40px 0 20px 0;
@@ -206,23 +206,23 @@
       gap: 12px;
       border-bottom: 4px solid var(--cor-primaria);
       padding-bottom: 8px;
-    }
+}   
 
-    body.alto-contraste .titulo-secao {
+body.alto-contraste .titulo-secao {
       color: var(--cor-primaria);
-    }
+}
 
-    /* =========================================================
-       5. BOTÕES DE ATALHO RÁPIDO
-       ========================================================= */
-    .grade-atalhos {
+/* =========================================================
+5. BOTÕES DE ATALHO RÁPIDO
+========================================================= */
+.grade-atalhos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
       margin-bottom: 30px;
-    }
+}
 
-    .botao-atalho {
+.botao-atalho {
       background-color: var(--cor-cartao);
       color: var(--cor-texto);
       border: 3px solid var(--cor-primaria);
@@ -237,60 +237,60 @@
       align-items: center;
       gap: 8px;
       box-shadow: var(--sombra);
-    }
+}
 
-    .botao-atalho:hover,
-    .botao-atalho:focus {
+.botao-atalho:hover,
+.botao-atalho:focus {
       background-color: var(--cor-primaria);
       color: #FFFFFF;
       outline: 4px solid #FFD700;
-    }
+}
 
-    body.alto-contraste .botao-atalho:hover,
-    body.alto-contraste .botao-atalho:focus {
+body.alto-contraste .botao-atalho:hover,
+body.alto-contraste .botao-atalho:focus {
       color: #000000;
-    }
+}
 
-    .icone-botao-atalho {
+.icone-botao-atalho {
       font-size: 1.8em;
-    }
+}
 
-    /* =========================================================
-       6. CARTÕES DE CONTEÚDO E DICAS
-       ========================================================= */
-    .cartao-informativo {
+/* =========================================================
+6. CARTÕES DE CONTEÚDO E DICAS
+========================================================= */
+.cartao-informativo {
       background-color: var(--cor-cartao);
       border: 3px solid var(--cor-borda);
       border-radius: var(--raio-borda);
       padding: 24px;
       margin-bottom: 24px;
       box-shadow: var(--sombra);
-    }
+}
 
-    .cabecalho-cartao {
+.cabecalho-cartao {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
       margin-bottom: 16px;
-    }
+}
 
-    .titulo-cartao {
+.titulo-cartao {
       font-size: 1.3em;
       color: var(--cor-primaria);
       display: flex;
       align-items: center;
       gap: 10px;
-    }
+}
 
-    /* Grade de Dicas Curtas */
-    .grade-dicas-curtas {
+/* Grade de Dicas Curtas */
+.grade-dicas-curtas {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-    }
+}
 
-    .cartao-dica-curta {
+.cartao-dica-curta {
       background-color: var(--cor-cartao);
       border: 3px solid var(--cor-primaria);
       border-radius: var(--raio-borda);
@@ -299,23 +299,23 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
+}
 
-    .cartao-dica-curta h3 {
+.cartao-dica-curta h3 {
       color: var(--cor-primaria);
       font-size: 1.2em;
       margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 8px;
-    }
+}
 
-    /* Lista de Atitudes Suspeitas */
-    .lista-suspeita {
+/* Lista de Atitudes Suspeitas */
+.lista-suspeita {
       list-style: none;
-    }
+}
 
-    .lista-suspeita li {
+.lista-suspeita li {
       background-color: var(--cor-alerta-fundo);
       border: 2px solid var(--cor-alerta);
       border-radius: 12px;
@@ -325,30 +325,30 @@
       align-items: flex-start;
       gap: 12px;
       font-weight: bold;
-    }
+}
 
-    .icone-alerta {
+.icone-alerta {
       font-size: 1.4em;
       flex-shrink: 0;
-    }
+}
 
-    /* Lista de Direitos */
-    .lista-direitos {
+/* Lista de Direitos */
+.lista-direitos {
       margin-left: 24px;
-    }
+}
 
-    .lista-direitos li {
+.lista-direitos li {
       margin-bottom: 16px;
-    }
+}
 
-    .lista-direitos strong {
+.lista-direitos strong {
       color: var(--cor-primaria);
-    }
+}
 
-    /* =========================================================
-       7. BOTÃO LEITOR DE VOZ (TTS)
-       ========================================================= */
-    .botao-ouvir {
+/* =========================================================
+7. BOTÃO LEITOR DE VOZ (TTS)
+========================================================= */
+.botao-ouvir {
       background-color: #333333;
       color: #FFFFFF;
       border: 2px solid #FFFFFF;
@@ -361,18 +361,18 @@
       align-items: center;
       gap: 6px;
       flex-shrink: 0;
-    }
+}
 
-    .botao-ouvir:hover,
-    .botao-ouvir:focus {
+.botao-ouvir:hover,
+.botao-ouvir:focus {
       background-color: #555555;
       outline: 3px solid #FFD700;
-    }
+}
 
-    /* =========================================================
-       8. JANELA MODAL DE AJUDA
-       ========================================================= */
-    .camada-modal {
+/* =========================================================
+8. JANELA MODAL DE AJUDA
+========================================================= */
+.camada-modal {
       display: none;
       position: fixed;
       top: 0;
@@ -384,9 +384,9 @@
       justify-content: center;
       align-items: center;
       padding: 20px;
-    }
+}
 
-    .conteudo-modal {
+.conteudo-modal {
       background-color: var(--cor-cartao);
       border: 4px solid var(--cor-destaque);
       border-radius: var(--raio-borda);
@@ -394,18 +394,18 @@
       max-width: 550px;
       width: 100%;
       box-shadow: var(--sombra);
-    }
+}
 
-    .conteudo-modal h3 {
+.conteudo-modal h3 {
       color: var(--cor-destaque);
       font-size: 1.5em;
       margin-bottom: 16px;
       display: flex;
       align-items: center;
       gap: 10px;
-    }
+}
 
-    .botao-fechar-modal {
+.botao-fechar-modal {
       background-color: #333333;
       color: #FFFFFF;
       border: 2px solid #FFFFFF;
@@ -416,41 +416,41 @@
       cursor: pointer;
       width: 100%;
       margin-top: 20px;
-    }
+}
 
-    .botao-fechar-modal:hover,
-    .botao-fechar-modal:focus {
+.botao-fechar-modal:hover,
+.botao-fechar-modal:focus {
       background-color: #555555;
       outline: 3px solid #FFD700;
-    }
+}
 
     /* =========================================================
        9. RODAPÉ
        ========================================================= */
-    rodape {
+rodape {
       display: block;
       text-align: center;
       padding: 30px 20px;
       margin-top: 50px;
       border-top: 3px solid var(--cor-borda);
       font-size: 0.95em;
-    }
+}
 
     @media (max-width: 600px) {
-      .barra-acessibilidade {
+.barra-acessibilidade {
         flex-direction: column;
         align-items: stretch;
       }
 
-      .acessibilidade-grupo {
+.acessibilidade-grupo {
         justify-content: space-between;
       }
 
-      .banner-inicio h1 {
+.banner-inicio h1 {
         font-size: 1.8em;
       }
 
-      .cabecalho-cartao {
+.cabecalho-cartao {
         flex-direction: column;
         align-items: flex-start;
       }
